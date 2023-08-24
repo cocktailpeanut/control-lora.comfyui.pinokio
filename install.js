@@ -12,14 +12,14 @@ const models = [
     method: "fs.download",
     params: {
       url: model,
-      dir: "https://github.com/cocktailpeanut/comfyui.pinokio.git/ComfyUI/models/ControlNet/control-lora"
+      path: "https://github.com/cocktailpeanut/comfyui.pinokio.git/ComfyUI/models/ControlNet/control-lora/" + model.split("/").slice(-1)[0]
     }
   }
 }).concat({
   method: "fs.download",
   params: {
     url: "https://huggingface.co/stabilityai/control-lora/resolve/main/revision/clip_vision_g.safetensors",
-    dir: "https://github.com/cocktailpeanut/comfyui.pinokio.git/ComfyUI/models/clip_vision"
+    path: "https://github.com/cocktailpeanut/comfyui.pinokio.git/ComfyUI/models/clip_vision/clip_vision_g.safetensors"
   }
 })
 
