@@ -40,5 +40,16 @@ const workflows = [
   }
 })
 module.exports = {
-  run: models.concat(workflows)
+  run: models.concat(workflows).concat([{
+    method: "input",
+    params: {
+      title: "Install Complete",
+      description: "All the models and workflows have been saved to comfyui.pinokio.git. Go back to the dashboard and launch ComfyUI"
+    }
+  }, {
+    method: "browser.open",
+    params: {
+      url: "/?selected=ComfyUI"
+    }
+  }])
 }
