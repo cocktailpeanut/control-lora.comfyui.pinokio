@@ -49,7 +49,7 @@ module.exports = {
   }, {
     method: "browser.open",
     params: {
-      url: "/?selected=ComfyUI"
+      uri: "/?selected=ComfyUI"
     }
   }])
 }
